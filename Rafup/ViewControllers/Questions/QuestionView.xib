@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionView" customModule="Rafup" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QuestionView" customModule="Rafup" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VNW-yx-fZ6">
+                    <rect key="frame" x="16" y="118" width="288" height="25"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which of the following artists is known for painting the ceiling of the Sistine Chapel?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqv-GP-wtu">
+                    <rect key="frame" x="16" y="45" width="288" height="64.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GZR-1Q-TuH">
+                    <rect key="frame" x="33" y="151" width="254" height="312"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="tBq-0n-HIw"/>
+                    </constraints>
+                </tableView>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20F-i8-ihY">
+                    <rect key="frame" x="33" y="478" width="254" height="50"/>
+                    <color key="backgroundColor" red="0.8980392157" green="0.74901960779999999" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="DHN-fO-hWz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <state key="normal" title="Submit">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapSumitButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="GVD-Pd-QTG"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GZR-1Q-TuH" firstAttribute="top" secondItem="VNW-yx-fZ6" secondAttribute="bottom" constant="10" id="08E-4Z-RcV"/>
+                <constraint firstItem="VNW-yx-fZ6" firstAttribute="top" secondItem="Kqv-GP-wtu" secondAttribute="bottom" constant="8" id="6Pl-F0-KYh"/>
+                <constraint firstItem="VNW-yx-fZ6" firstAttribute="leading" secondItem="Kqv-GP-wtu" secondAttribute="leading" id="9dj-BO-3l9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Kqv-GP-wtu" secondAttribute="trailing" constant="16" id="KI0-Bh-gNN"/>
+                <constraint firstItem="Kqv-GP-wtu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="ZLt-dF-Ect"/>
+                <constraint firstItem="20F-i8-ihY" firstAttribute="trailing" secondItem="GZR-1Q-TuH" secondAttribute="trailing" id="dbT-4h-h8h"/>
+                <constraint firstItem="Kqv-GP-wtu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="25" id="euF-74-FKt"/>
+                <constraint firstItem="GZR-1Q-TuH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="33" id="f7g-3C-BeC"/>
+                <constraint firstItem="20F-i8-ihY" firstAttribute="leading" secondItem="GZR-1Q-TuH" secondAttribute="leading" id="j4g-eo-ilo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="20F-i8-ihY" secondAttribute="bottom" constant="40" id="pZa-Ux-Cpi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GZR-1Q-TuH" secondAttribute="trailing" constant="33" id="t30-pl-m0d"/>
+                <constraint firstItem="VNW-yx-fZ6" firstAttribute="trailing" secondItem="Kqv-GP-wtu" secondAttribute="trailing" id="vsQ-pl-i5w"/>
+                <constraint firstItem="20F-i8-ihY" firstAttribute="top" secondItem="GZR-1Q-TuH" secondAttribute="bottom" constant="15" id="vur-CA-yTr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                    <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="questionImagevw" destination="VNW-yx-fZ6" id="HQO-it-d07"/>
+                <outlet property="questionLbl" destination="Kqv-GP-wtu" id="5a3-OO-HFl"/>
+                <outlet property="tableVw" destination="GZR-1Q-TuH" id="MQZ-0v-Ktc"/>
+            </connections>
+            <point key="canvasLocation" x="24" y="51"/>
+        </view>
+    </objects>
+</document>

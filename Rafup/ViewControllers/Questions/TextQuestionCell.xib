@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextQuestionCell" rowHeight="58" id="KGk-i7-Jjw" customClass="TextQuestionCell" customModule="Rafup" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="57.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_uncheck" translatesAutoresizingMaskIntoConstraints="NO" id="yIC-qA-gR1">
+                        <rect key="frame" x="22" y="18.5" width="21" height="20.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Warhol" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvR-6s-fV7">
+                        <rect key="frame" x="59" y="11" width="245" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7F-rY-ZYi">
+                        <rect key="frame" x="315" y="0.0" width="3" height="56.5"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="3" id="HqL-o9-rW9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="yIC-qA-gR1" secondAttribute="bottom" constant="8" id="6DH-3Z-eBV"/>
+                    <constraint firstAttribute="bottom" secondItem="G7F-rY-ZYi" secondAttribute="bottom" constant="1" id="BXo-W1-BSP"/>
+                    <constraint firstItem="yIC-qA-gR1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="aAk-Tl-gUD"/>
+                    <constraint firstItem="WvR-6s-fV7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="aKI-7n-YSD"/>
+                    <constraint firstItem="WvR-6s-fV7" firstAttribute="leading" secondItem="yIC-qA-gR1" secondAttribute="trailing" constant="16" id="cFD-kG-fFv"/>
+                    <constraint firstItem="WvR-6s-fV7" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="eft-os-HHe"/>
+                    <constraint firstItem="G7F-rY-ZYi" firstAttribute="leading" secondItem="WvR-6s-fV7" secondAttribute="trailing" constant="11" id="nbM-9z-LxU"/>
+                    <constraint firstAttribute="trailing" secondItem="G7F-rY-ZYi" secondAttribute="trailing" constant="2" id="pAs-Nt-nbX"/>
+                    <constraint firstItem="yIC-qA-gR1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pTS-Xl-WIa"/>
+                    <constraint firstItem="G7F-rY-ZYi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sWp-m8-qpw"/>
+                    <constraint firstItem="WvR-6s-fV7" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="yxp-jC-NYD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="29"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="lblScrollViewIndicator" destination="G7F-rY-ZYi" id="zif-OE-FBj"/>
+                <outlet property="questionLbl" destination="WvR-6s-fV7" id="fFd-wr-37O"/>
+                <outlet property="questionMarkImageVw" destination="yIC-qA-gR1" id="ueg-VY-uzO"/>
+            </connections>
+            <point key="canvasLocation" x="24.375" y="58.098591549295776"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle_uncheck" width="21" height="21"/>
+    </resources>
+</document>
